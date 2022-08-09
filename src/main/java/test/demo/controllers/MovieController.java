@@ -17,4 +17,10 @@ public class MovieController {
     ) {
         return movieRepository.save(movie);
     }
+    @GetMapping ()
+    public Movie getAllMovie(
+            @RequestBody Movie movie
+    ){
+        return movieRepository.findAll(movie);
+    }
 }
